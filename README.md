@@ -1,6 +1,6 @@
-- 👋 Hi, I’m Asp/ImMacroNo
+- 👋 Hi, I’m Asp
 - 👀 I’m interested in C#, HTML, CSS, Python
-- 🌱 I’m currently learning HTML, CSS
+- 🌱 I’m currently learning HTML, CSS, C#
 - 💞️ I’m Happy to be alive.
 - 📫 How to reach me on discord Asp#6864
 <!---
