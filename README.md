@@ -1,4 +1,4 @@
-- 👋 Hi, I’m Asp
+- 👋 Hi, I’m ...
 - 👀 I’m interested in C#, HTML, CSS, Python
 - 🌱 I’m currently learning HTML, CSS, C#
 - Need some sleep.
