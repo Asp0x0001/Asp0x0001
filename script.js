@@ -56,7 +56,7 @@ document.head.appendChild(styles);
 // Continuously generate particles at intervals to avoid performance lag
 function generateParticlesContinuously() {
     generateParticles();
-    setTimeout(generateParticlesContinuously, 1000); // Generate particles every 300ms (slower for less lag)
+    setTimeout(generateParticlesContinuously, 10000); // Generate particles every 300ms (slower for less lag)
 }
 
 // Start generating particles when the page loads
