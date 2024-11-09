@@ -1,0 +1,322 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Background and Centering */
+body {
+    background-color: #111;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+}
+
+/* Profile Card */
+.profile-card {
+    background: rgba(39, 44, 71, 0.9);
+    border-radius: 20px;
+    box-shadow: 0px 0px 40px rgba(99, 127, 255, 0.5);
+    width: 80%;
+    max-width: 350px;
+    text-align: center;
+    padding: 30px;
+    position: relative;
+    animation: slideUp 1s ease-out;
+    z-index: 1;
+}
+
+/* Profile Image */
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid #678eff;
+    box-shadow: 0px 0px 30px rgba(99, 127, 255, 0.6);
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 40px rgba(99, 127, 255, 0.8);
+}
+
+/* Bio Section */
+.bio {
+    margin-top: 20px;
+}
+
+.username {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #ff9ad5;
+    text-shadow: 0px 0px 20px rgba(99, 127, 255, 0.7);
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease-out;
+}
+
+.role {
+    font-size: 1.2em;
+    color: #c7cbe7;
+    margin-bottom: 15px;
+    animation: fadeIn 1s ease-out 0.3s;
+}
+
+.about-me {
+    font-size: 1em;
+    color: #d0d0ff;
+    line-height: 1.5;
+    margin-top: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #678eff;
+    animation: fadeIn 1s ease-out 0.6s;
+}
+
+/* Animation Effects */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Bubble Speech */
+@keyframes bubbleBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Position the Bubble in Front */
+.bubble {
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #678eff;
+    padding: 10px 15px;
+    border-radius: 25px;
+    color: white;
+    font-size: 1.1em;
+    box-shadow: 0px 0px 15px rgba(99, 127, 255, 0.8);
+    animation: bubbleBounce 3s ease-in-out infinite;
+    z-index: 2;
+}
+
+.bubble:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 10px solid transparent;
+    border-top-color: #678eff;
+}
+
+/* Glowing Particle Effect */
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: transparent;
+    z-index: 0;
+}
+
+/* Star Particle Effect */
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8);
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+    100% {
+        transform: translateY(100vh) translateX(0);
+    }
+}
+
+/* Hover and Active Effects */
+.profile-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Neon Glow for Text and Elements */
+.username, .role, .about-me {
+    color: #ff9ad5;
+    text-shadow: 0 0 10px rgba(255, 154, 213, 0.8), 0 0 20px rgba(99, 127, 255, 0.6);
+    transition: text-shadow 0.3s ease-in-out;
+}
+
+.profile-card:hover .username, .profile-card:hover .role, .profile-card:hover .about-me {
+    text-shadow: 0 0 20px rgba(255, 154, 213, 1), 0 0 30px rgba(99, 127, 255, 1);
+}
+
+.fade {
+    animation: fadeInOut 30s infinite;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    95% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Taskbar Styles */
+.taskbar {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(39, 44, 71, 0.9);
+    padding: 15px 30px;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 0 20px rgba(99, 127, 255, 0.6);
+    color: #ff9ad5;
+    font-size: 1.5em;
+    text-align: center;
+    animation: slideUp 1s ease-out;
+    z-index: 10;
+}
+
+.anime-boxes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.anime-box {
+    background-color: #2f3d61;
+    width: 120px;
+    height: 160px;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(99, 127, 255, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.anime-box:hover {
+    transform: scale(1.1);
+}
+
+.anime-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-bottom: 2px solid #678eff;
+}
+
+.anime-box p {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 1em;
+    text-shadow: 0 0 10px rgba(99, 127, 255, 0.7);
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .profile-card {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .username {
+        font-size: 2em;
+    }
+
+    .role {
+        font-size: 1em;
+    }
+
+    .about-me {
+        font-size: 0.9em;
+    }
+
+    .taskbar {
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .profile-card {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .username {
+        font-size: 1.8em;
+    }
+
+    .role {
+        font-size: 0.9em;
+    }
+
+    .about-me {
+        font-size: 0.8em;
+    }
+
+    .taskbar {
+        font-size: 1em;
+    }
+}
